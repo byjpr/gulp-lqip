@@ -1,0 +1,27 @@
+{
+  "name": "gulp-lqip",
+  "version": "1.0.1",
+  "main": "index.js",
+  "bin": {
+    "inline-images": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cheerio": "cheeriojs/cheerio",
+    "gulp-util": "^3.0.4",
+    "sharp": "^0.17.3"
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/inline-images.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/inline-images/issues"
+  },
+  "homepage": "https://github.com/maxogden/inline-images",
+  "description": "transforms html and replaces <img> tags with inline data uri driven images"
+}
