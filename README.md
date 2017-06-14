@@ -8,6 +8,8 @@
 <h4 align="center">LQIP: Low Quality Images Placeholder</h4>
 
 #### Inspired By:
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Cognitip/gulp-lqip.svg)](https://greenkeeper.io/)
 - lqip for webpack
 - gulp inline image
 - more
