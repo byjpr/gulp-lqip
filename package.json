@@ -1,17 +1,23 @@
 {
   "name": "gulp-lqip",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
     "inline-images": "cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js"
   },
   "dependencies": {
     "cheerio": "cheeriojs/cheerio",
     "gulp-util": "^3.0.4",
-    "sharp": "^0.17.3"
+    "sharp": "^0.17.3",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "mocha": "^2.2.0",
+    "vinyl": "^0.4.6"
   },
   "author": "max ogden",
   "license": "BSD",
