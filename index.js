@@ -3,6 +3,7 @@ var path = require('path')
 var fs = require('fs')
 var url = require('url')
 var sharp = require('sharp')
+var through = require('through2')
 
 var gutil = require('gulp-util')
 var PluginError = gutil.PluginError
@@ -36,14 +37,20 @@ function inliner(html, base) {
       var src = el.attr('src')
       if (src && isLocal(src)) {
         var dir = path.dirname(src)
-        var path = path.join(base, src)
-        sharp(path)
+        var loc = path.join(base, src)
+        var extension = path.extname(loc)
+
+        sharp(loc)
           .resize(14) // resize to 16px width and auto height
           .toBuffer() // converts to buffer for Base64 conversion
           .then(data => {
             presource = toBase64(extension, data)
             el.attr('src', presource)
             el.attr('data-CogitipLoad-src', src)
+          })
+          .catch(err => {
+            console.error("FUCK FUCK ")
+            console.error(err)
           })
       }
     })
